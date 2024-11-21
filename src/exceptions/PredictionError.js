@@ -1,4 +1,6 @@
-class PredictionError extends Error {
+const ClientError = require('./ClientError');
+
+class PredictionError extends ClientError {
     constructor(message, statusCode = 400) {
         super(message);
         this.statusCode = statusCode;

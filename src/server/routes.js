@@ -1,4 +1,4 @@
-const postBinaryHandler = require('../server/handler');
+const { postBinaryHandler, getHistoriesHandler } = require('../server/handler');
 
 const routes = [
     {
@@ -12,6 +12,11 @@ const routes = [
                 maxBytes: 1048576,
             },
         },
+    },
+    {
+        path: '/predict/histories',
+        method: 'GET',
+        handler: getHistoriesHandler,
     },
 ];
 
